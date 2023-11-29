@@ -114,6 +114,9 @@ async def process_email(message: Message, state: FSMContext):
     await message.answer("Введите день рождения контакта")
 
 
+'''В этом декораторе происходит какая то дичь >>>>>>>'''
+
+
 @dp.message(ContactData.email)
 async def process_birthday(message: Message, state: FSMContext):
     await state.update_data(birthday=message.text)
